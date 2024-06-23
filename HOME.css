@@ -1,0 +1,377 @@
+.one{
+    background-color: black;
+    color: rgb(0, 195, 255);
+    text-align: center;
+}
+
+:root{
+    --z24: translateZ(24.5px);
+    --z80: translateZ(80px);
+    --ts: all .5s ease;
+    --x90: rotateX(90deg);
+    --xm90: rotateX(-90deg);
+    --y90: rotateY(90deg);
+    --ym90: rotateY(-90deg);
+}
+/* 
+nav{
+    @include _relative-box($n, $n, 16px 16px 0 16px, 100%, $n);
+    position: $rl
+}
+
+ol{
+    @include _relative-box($n, 0, 0, 100%, $n);
+    list-style-type: $no
+}
+
+.main-menu{
+    @include _flexbox($rl, $rw, $n, $n, $c)
+}
+
+li{
+    width: 160px;
+    position: $rl;
+    cursor: pointer;
+    span{
+        @include _dimension(100%, 49px);
+        @include _layout($bl, $rl, $n);
+        transition: var(--ts);
+        transform-style: preserve-3d;
+        #{$bfaf}{
+            @include _relative-box($n, $n, 16px 0, 100%, $n);
+            @include _layout($bl, $ab, $n);
+            border-radius: 8px;
+            @include _text($n, 400 14px 'Consolas', $c);
+            text-transform: uppercase
+        }
+    }
+}
+
+.main-item:nth-of-type(2),
+.main-item:nth-of-type(4){
+    margin: 0 2px
+}
+
+.main-item:nth-of-type(3)::before,
+.main-item:nth-of-type(4)::before{
+    width: 100%;
+    top: 25px;
+    @include _layout($bl, $ab, $n);
+    @include _text(#fff, 400 24px 'Consolas', $c);
+    transition: var(--ts);
+    z-index: 100;
+    content: '\0025BE'
+}
+
+.main-item{
+    &:hover > span{
+        transform: var(--x90)
+    }
+    > span{
+        #{$bf}{
+            background: #000;
+            color: #fff;
+            transform: var(--z24);
+            box-shadow: 0 8px 6px -6px #888
+        }
+        #{$af}{
+            background: #ff9900;
+            transform: var(--xm90) var(--z24)
+        }
+    }
+}
+
+$menus: home, about, widgets, kabobs, contact;
+@each $menu in $menus{
+    .#{$menu}{
+        #{$bfaf}{
+            content: '#{$menu}'
+        }
+    }
+}
+
+.sub-menu{
+    top: 51px;
+    @include _layout($no, $ab, $n);
+    li{
+        opacity: 0;
+        transform: translateY(-10px);
+        &:nth-of-type(2){
+            margin: 2px 0
+        }
+    }
+}
+
+@for $i from 1 through 3{
+    .sub-item:nth-of-type(#{$i}){
+        animation: fade .5s ease ($i * .2s) both
+    }
+}
+
+@include _keyframes(fade, to){
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.sub-item span{
+    #{$bf}{
+        background: #008080;
+        color: #fff;
+        transform: var(--z80)
+    }
+    #{$af}{
+        background: #bc003b;
+        color: #fff
+    }
+}
+
+.item-left{
+    &:hover span{
+        transform: var(--y90)
+    }
+    span::after{
+        transform: var(--ym90) var(--z80)
+    }
+}
+
+.item-right{
+    &:hover span{
+        transform: var(--ym90)
+    }
+    span::after{
+        transform: var(--y90) var(--z80)
+    }
+}
+
+$sizes: small, standart, big;
+@each $size in $sizes{
+    .#{$size}{
+        #{$bfaf}{
+            content: '#{$size + ' ' + 'widgets'}'
+        }
+    }
+}
+
+$categories: premium, combo, special;
+@each $category in $categories{
+    .#{$category}{
+        #{$bfaf}{
+            content: '#{$category + ' ' + 'kabobs'}'
+        }
+    }
+}
+
+.main-item:nth-of-type(3):hover,
+.main-item:nth-of-type(4):hover{
+    #{$bf}{
+        color: #000;
+        content: '\0025B4'
+    }
+    .sub-menu{
+        display: $bl
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 839px){
+	nav{
+        width: 320px;
+        margin: 0 auto
+    }
+}
+
+@media (max-width: 839px){
+    .main-item:nth-of-type(2),
+    .main-item:nth-of-type(4){
+        margin: 3px 0
+    }
+    .sub-menu{
+        position: $rl;
+        top: 1px;
+        padding: 2px 0 1px 0;
+        li{
+            span{
+                #{$bf}{
+                    transform: var(--z24)
+                }
+                #{$af}{
+                    transform: rotateY(0deg) var(--x90) var(--z24)
+                }
+            }
+            &:hover span{
+                transform: var(--xm90)
+            }
+        }
+    }
+}  */
+
+
+
+
+html {
+    height: 100%;
+  }
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+  }
+  
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+    background: #03e9f4;
+    color: darkslategrey;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 2s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ff0000);
+    animation: btn-anim3 4s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #770527);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .60s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+  
